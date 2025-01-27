@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODOPage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <link rel="stylesheet" href="{% static 'css/style2.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js" integrity="sha512-b+nQTCdtTBIRIbraqNEwsjB6UvL3UEMkXnhzd8awtCYh0Kcsjl9uEgwVFVbhoj3uu1DO1ZMacNvLoyJJiNfcvg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="{% static 'js/script.js' %}" defer></script>
+</head>
+<body>
+    <div class="signup-login">
+        <div><h1>Hello {{user}}</h1></div>
+        <div class="signup-box">
+            <div class="heading">
+                Get Things Done!
+            </div>
+            <div class="anca"><a href="{% url 'signout' %}" class="signout"><i class="fa-solid fa-right-from-bracket"></i></a></div>
+            
+            <form method="post">
+                {% csrf_token %}
+                <input type="text" class="inp" name="title" required placeholder="Add Today's Task">
+
+
+                <input type="submit" class="submit-button" value="Add task">
+            </form>
+            {% for todo in res %}
+            <div class="Todo">
+                <h5>{{todo.srno}}</h5>
+                <p>{{todo.title}}</p>
+            
+            
+                <div>
+                    <a href="/edit_todo/{{todo.srno}}"><i class="fa-solid fa-pen-to-square"></i></a>
+                    <a href="/delete_todo/{{todo.srno}}"><i class="fa-solid fa-trash"></i></a>
+                </div>
+            </div>
+            {% endfor %}
+            
+        </div>
+    </div>
+</body>
+</html>

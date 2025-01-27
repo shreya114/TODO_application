@@ -1,0 +1,97 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0d1b2a;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container */
+.signup-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Signup Box */
+.signup-box {
+    background-color: #1b263b;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Form Heading */
+.heading {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    color: #ffcc00;
+}
+
+/* Separator Line */
+.line {
+    background-color: #415a77;
+    height: 2px;
+    width: 100%;
+    margin: 0.5rem 0;
+}
+
+/* Input Fields */
+.field {
+    margin-bottom: 1rem;
+}
+
+.field b {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.inp {
+    width: 100%;
+    padding: 0.7rem;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #415a77;
+}
+
+/* Submit Button */
+.submit-button {
+    width: 100%;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffcc00;
+    color: #1b263b;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #ffa500;
+}
+
+/* Login Link */
+.anc {
+    text-decoration: none;
+    color: #ffcc00;
+    transition: color 0.3s;
+}
+
+.anc:hover {
+    color: #ffa500;
+}
